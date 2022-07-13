@@ -44,8 +44,9 @@ public class Tipos {
         System.out.println(varText);
         String textVar = "Hola mundo";
         System.out.println(textVar);
-               
-        
+       
+
+        System.out.println("Numeros enteros: " + numero1 + " , " + numero2 + " , " + numero3 + " , " + numero4); 
     }
     
 }
