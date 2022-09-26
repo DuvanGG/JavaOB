@@ -4,9 +4,7 @@
  */
 package com.mycompany.javaob;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Vector;
@@ -52,8 +50,8 @@ public class TiposAvanzados {
         
         System.out.println("");
         
-        String fileIn = "/etc/passwd";
-        String fileOut = "";
+        String fileIn = "/media/duvan/INFO/Code/Java/javaob/src/main/java/com/mycompany/javaob/file";
+        String fileOut = "/media/duvan/INFO/Code/Java/javaob/src/main/java/com/mycompany/javaob/fileCopia";
         
         copiaFile(fileIn, fileOut);
              
@@ -241,20 +239,18 @@ public class TiposAvanzados {
     public static void copiaFile(String fileIn, String fileOut){
         
         try {
-            
             InputStream fichero = new FileInputStream(fileIn);
+            byte []datos = fichero.readAllBytes(); //Fichero pequeño
+
+            PrintStream ficheroCopia = new PrintStream(fileOut);
+            ficheroCopia.write(datos);
+            System.out.println("Se ha realizado la copia correctamente");
             
         } catch (FileNotFoundException e) {
-            System.out.println("No lo encuentro" + e.getMessage());
-            
+            System.out.println("File not found" + e.getMessage());
+        } catch (IOException e){
+            System.out.println("No se puede leer el fichero: " + e.getMessage());
         }
-        
-       
-        
-        
-    }
-    
-    
-    
 
+    }
 }
