@@ -50,8 +50,8 @@ public class TiposAvanzados {
         
         System.out.println("");
         
-        String fileIn = "/media/duvan/INFO/Code/Java/javaob/src/main/java/com/mycompany/javaob/file";
-        String fileOut = "/media/duvan/INFO/Code/Java/javaob/src/main/java/com/mycompany/javaob/fileCopia";
+        String fileIn = "/home/duvan/Documentos/JavaOB/src/main/java/com/mycompany/javaob/file";
+        String fileOut = "/home/duvan/Documentos/JavaOB/src/main/java/com/mycompany/javaob/fileCopia";
         
         copiaFile(fileIn, fileOut);
              
